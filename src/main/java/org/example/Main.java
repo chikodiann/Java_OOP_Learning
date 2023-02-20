@@ -3,13 +3,21 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        BankAccount bobsAccount = new BankAccount("0011223344",
-                1000.00, "Bob Brown", "bob@email.com",
-                "(081) 1234 56");
+        BankAccount bobsAccount = new BankAccount();
+//        BankAccount bobsAccount = new BankAccount("0011223344",
+//                1000.00, "Bob Brown", "bob@email.com",
+//                "(081) 1234 56");
+        BankAccount timsAccount = new BankAccount("111122", "Tim Buchi", "081 755656")
+;
+        System.out.println("Account no: " + timsAccount.getAccountNumber() +
+                "; name " + timsAccount.getCustomerName());
+
+
         System.out.println(bobsAccount.getAccountNumber());
         System.out.println(bobsAccount.getAccountBalance());
 
-        /* this is no longer needed, all of this code is repalced by the use of a constructor...
+
+        /* this is no longer needed, all of this code is replaced by the use of a constructor...
         bobsAccount.setAccountNumber("0011223344");
         bobsAccount.setAccountBalance(1000.00);
         bobsAccount.setCustomerName("Bob Brown");
@@ -52,5 +60,26 @@ public class Main {
         System.out.println(person.getLastName());
         System.out.println(person.getFullName());
 
+        System.out.println("**********************************************");
+        System.out.println();
+
+        Customer customer1 = new Customer("Chika",1000,"chika@email.com");
+        System.out.println(customer1.getName());
+        System.out.println(customer1.getCreditLimit());
+        System.out.println(customer1.getEmailAddress());
+
+        System.out.println();
+        Customer customer2 = new Customer();
+
+        System.out.println(customer2.getName());
+        System.out.println(customer2.getCreditLimit());
+        System.out.println(customer2.getEmailAddress());
+
+        System.out.println();
+        Customer customer3 = new Customer("Joe", "joe@email.com");
+
+        System.out.println(customer3.getName());
+        System.out.println(customer3.getCreditLimit());
+        System.out.println(customer3.getEmailAddress());
     }
 }
