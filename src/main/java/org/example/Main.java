@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.PriorityQueue;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -81,5 +83,27 @@ public class Main {
         System.out.println(customer3.getName());
         System.out.println(customer3.getCreditLimit());
         System.out.println(customer3.getEmailAddress());
+
+        System.out.println("**********************************************");
+        System.out.println();
+
+
+
+
+                PriorityQueue<String> priorityQueue = new PriorityQueue<>();
+
+                // Add the strings to the priority queue
+
+                priorityQueue.add("Arinze Isaac");
+                priorityQueue.add("Chikodinaka Anyanwu");
+                priorityQueue.add("Chinwendu Nsonwu");
+                priorityQueue.add("Susan Egonu");
+                priorityQueue.add("Adebisi Adeyemi");
+
+                // Print the priority queue
+                while (!priorityQueue.isEmpty()) {
+                    System.out.println(priorityQueue.poll());
+                }
+
     }
 }
