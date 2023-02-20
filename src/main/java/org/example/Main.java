@@ -105,5 +105,39 @@ public class Main {
                     System.out.println(priorityQueue.poll());
                 }
 
+        System.out.println("**********************************************");
+        System.out.println();
+
+
+        for (int i = 1; i <= 5; i++) {
+            LPAStudent s = new LPAStudent("592300" + i,
+                    switch (i) {
+                        case  1 -> "Mary";
+                        case  2 -> "Carol";
+                        case  3 -> "Tim";
+                        case  4 -> "Harry";
+                        case  5 -> "Lisa";
+                        default -> "Anonymous";
+                    },
+                    "05/11/1996",
+                    "Java Masterclass");
+            System.out.println(s);
+        }
+
+        System.out.println();
+        Student pojoStudent = new Student("5923006", "Ann",
+                "05/11/1996", "Java Masterclass");
+        LPAStudent recordStudent = new LPAStudent("5923007", "Bill",
+                "05/11/1996", "Java Masterclass");
+
+        System.out.println(pojoStudent);
+        System.out.println(recordStudent);
+
+        System.out.println();
+
+        System.out.println(pojoStudent.getName() + " is taking " +
+                pojoStudent.getClassList());
+        System.out.println(recordStudent.name() + " is taking " +
+                recordStudent.classList());
     }
 }
